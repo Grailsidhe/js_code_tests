@@ -10,7 +10,9 @@
     
     <script>
 
-        for(let i = 0; i < 5; i++){
+const loop1 = 1;
+        while(loop1 > 0){
+
             const playerName = prompt("What's your name?");
             const random = Math.floor(Math.random() * 100) + 1;
             const playerNumber = prompt("Give a number from 1 to 100");
@@ -18,17 +20,17 @@
 
                 if(playerNumber > random){
                     const playerMore = ("It is less");
-                    alert(playerMore + ", " + playerGameNumber)
+                    alert(playerMore + ", " + playerGameNumber);
                 } else if(playerNumber < random){
                     const playerLess = ("It is more");
-                    alert(playerLess + ", " + playerGameNumber)
+                    alert(playerLess + ", " + playerGameNumber);
                 } else{
                     const playerWins = (playerName + " wins!");
-                    alert(playerWins + ", " + playerGameNumber)
+                    alert(playerWins + ", " + playerGameNumber);
+                    break
                 }
         }
-
-        while (playerMore || playerLess){}
+        
 
     </script>
 
