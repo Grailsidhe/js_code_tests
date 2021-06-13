@@ -9,23 +9,23 @@
 <body>
     
     <script>
+    const playerName = prompt("What's your name?");
+    const random = Math.floor(Math.random() * 100) + 1;
+    let playerNumber = prompt("Give a number from 1 to 100");
 
-        const playerName = prompt("What's your name?");
-        const random = Math.floor(Math.random() * 100) + 1;
-        const playerNumber = prompt("Give a number from 1 to 100");
+    while(random !== playerNumber){
 
-        if(playerNumber > random){
-            console.log("It is less");
-            console.log("The winning number is " + random)
-        }
-        else if(playerNumber < random){
-            console.log("It is more");
-            console.log("The winning number is " + random)
-        }
-        else if(playerNumber === random){
-            console.log(playerName + " wins")
-            console.log("The number is " + random)
-        }
+                    if(playerNumber > random){
+                        alert("It is less. ");
+                    } else if(playerNumber < random){
+                        alert("It is more. ");
+                    } 
+                    playerNumber = prompt("Give a number from 1 to 100");
+    }
+    alert(playerName + " wins!");
+
+
+        
 
     </script>
 
