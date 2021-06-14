@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="number" id="firstNumber">
+
+<select name="operators" id="operators">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+
+<input type="number" id="secondNumber">
+<input type="button" id="button" value="Calculate">
+<input type="button" id="clear" value="Clear">
+
+<div id="result"></div>
+
+
+<script>
+// added the js to the HTML for GitHub
+
+    const theButton = document.getElementById("button");
+    const theResult = document.getElementById("result");
+
+
+    theButton.addEventListener('click', function(){
+
+    const firstValue = parseInt(document.getElementById("firstNumber").value);
+    const operator = document.getElementById("operators").value;
+    const secondValue = parseInt(document.getElementById("secondNumber").value);
+
+    if(operator === "+"){
+        result.innerText = firstValue + secondValue;
+    } else if(operator === "-"){
+        result.innerText = firstValue - secondValue;
+    } else if(operator === "*"){
+        result.innerText = firstValue * secondValue;
+    } else if(operator === "/"){
+        if(secondValue === 0){
+            result.innerText = "ERROR";
+        } else {
+        result.innerText = firstValue / secondValue;
+        }
+    }
+    });
+
+    const clearButton = document.getElementById("clear");
+
+    clearButton.addEventListener("click", function(){
+        document.getElementById("firstNumber").value = "";
+        document.getElementById("secondNumber").value = "";
+        result.innerText = "";
+    })
+</script>
+
+</body>
+</html>
